@@ -16,7 +16,7 @@ justify-content:center;
 }
 
 #horror{
-background-image:url("https://www.amnesty.org/remote.axd/aineupstrmediaprd.blob.core.windows.net/media/8132/191051_an_empty_chair_and_hanging_light_bulb_in_a_dark_room_.jpg?center=0.5,0.5&preset=fixed_1200_630");
+background-image:url("http://www.nonselling.com/wp-content/uploads/2017/08/Questioning.jpeg");
 background-repeat:no-repeat;
 background-size:cover;
 font-family: 'Nosifer', cursive;
@@ -35,18 +35,14 @@ font-size:36px;
     color:gold;
     }
 
-@font-face {
-font-family: "romanticFont";
-src: url(Pacifico-Regular.ttf);
-}
+
 #romance{
-background-image:url("https://previews.123rf.com/images/sapunkele/sapunkele1610/sapunkele161000022/63718277-pop-art-beautiful-woman-and-man-kissing-cartoon-romantic-couple-in-love-vintage-advertising-poster-f.jpg");
+background-image:url("https://live.staticflickr.com/7823/39939226603_4ef4f1e7d7_b.jpg");
 background-size:cover;
 background-repeat: no-repeat;
 margin-left:50px;
-font-family:romanticFont;
-color: cadetblue;
-font-size:44px;
+font-family: 'Alex Brush', cursive;
+font-size:60px;
 }
 #screen{
     border:gold dotted 2px;
