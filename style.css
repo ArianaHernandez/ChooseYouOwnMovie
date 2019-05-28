@@ -1,8 +1,10 @@
 #home{
-    background-image:url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/RJZZIy2/movie-theater-cloth-curtains-open_v1nh4alzz__F0003.png");
+    background-color:black;
     background-repeat:no-repeat;
     background-size:cover;
     text-align:center;
+    color:white;
+    
 }
 #buttons{
 display:flex;
@@ -16,34 +18,45 @@ justify-content:center;
 }
 
 #horror{
-background-image:url("http://www.nonselling.com/wp-content/uploads/2017/08/Questioning.jpeg");
-background-repeat:no-repeat;
-background-size:cover;
-font-family: 'Nosifer', cursive;
-color:red;
+background-color:black;
+border:white dotted 1px;
+width:100px;
+height:50px;
 font-size:36px;
+color:white;
 }
- @font-face {
-  font-family: "showtimeFont";
-  src: url(Showtime.ttf);
-}
-
- h1 {
+ .heading {
     text-align: center;
     font-family:showtimeFont;
     font-size:60px;
-    color:gold;
     }
 
-
-#romance{
-background-image:url("https://live.staticflickr.com/7823/39939226603_4ef4f1e7d7_b.jpg");
-background-size:cover;
-background-repeat: no-repeat;
-margin-left:50px;
-font-family: 'Alex Brush', cursive;
-font-size:60px;
+#choices{
+    border:red dotted 2px;
 }
-#screen{
-    border:gold dotted 2px;
+#horrorpage{
+    background-color: black;
+    color:red;
+    text-align: center
+}
+.btn{
+    background-color: transparent;
+    color:red;
+    font-size:25px;
+    border-color:black;
+}
+
+#romancepage{
+    background-color: pink;
+    color:#f442dc;
+    text-align: center
+}
+.btn2{
+    background-color: transparent;
+    color:#f442dc;
+    font-size:25px;
+    border-color:pink;
+}
+#screen2{
+    border:#f442dc dotted 2px;
 }
