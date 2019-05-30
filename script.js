@@ -11,8 +11,20 @@ var CAUGHT_STATE=7;
 var STAIR_STATE=8;
 var PRETEND_STATE2=9;
 var i=100;
+var START=2;
 var programState= YES_STATE;
-flash();
+function blinker() {
+	$('.fpage').hide(16);
+	$('.fpage').show(15.5);
+}
+setInterval(blinker, 1000);
+function blinkerTwo() {
+	$('#title').hide(14);
+	$('#title').show(15);
+}
+setInterval(blinkerTwo, 1000);
+
+
 $(".choiceOne").click(function(){
     if(programState===YES_STATE){
         $("#choices").append("You chose to sleep");
@@ -23,7 +35,7 @@ $(".choiceOne").click(function(){
           nextLevel("Continuing Pretending","Fight","You are still being dragged away what do you do?");
         programState=PRETEND_STATE2;
     }else if(programState===PRETEND_STATE2){
-        $("#choices").append("<br>You chose to continue pretending, you are dragged away never to be scene again.");
+        $("#choices").append("<br>You chose to continue pretending, you are dragged away never to be seene again.");
          GameOver("Game Over");
     }else if(programState===RESTART_STATE){
         $("#choices").empty();
@@ -106,12 +118,4 @@ function nextLevel(text1,text2,text3){
         $(".choiceTwo").text(text2);
         $("#caption").text(text3);
         setTimeout(function(){$("#story").show(); }, 1000);
-}
-function flash(){
-    do {
-     setTimeout(function(){$(".fpage").hide(); }, 1000);
-     setTimeout(function(){$(".fpage").show(); }, 1000);
-     i++
-    }while (i>10);
-     
 }
