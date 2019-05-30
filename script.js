@@ -9,16 +9,22 @@ var SECURE_STATE=5;
 var TURN_STATE=6;
 var CAUGHT_STATE=7;
 var STAIR_STATE=8;
+var PRETEND_STATE2=9;
+var i=100;
 var programState= YES_STATE;
-
+flash();
 $(".choiceOne").click(function(){
     if(programState===YES_STATE){
-        $("#choices").append("You chose to sleep in class");
+        $("#choices").append("You chose to sleep");
         nextLevel("Pretend To Be Unconscious","Fight","When you wake up, You realize being dragged away what do you do?");
         programState = PRETEND_STATE;
     }else if(programState===PRETEND_STATE){
-        $("#choices").append("<br> You were dragged away never to be seen again");
-        GameOver("Game Over");
+        $("#choices").append("<br> You chose to pretend to be knocked out");
+          nextLevel("Continuing Pretending","Fight","You are still being dragged away what do you do?");
+        programState=PRETEND_STATE2;
+    }else if(programState===PRETEND_STATE2){
+        $("#choices").append("<br>You chose to continue pretending, you are dragged away never to be scene again.");
+         GameOver("Game Over");
     }else if(programState===RESTART_STATE){
         $("#choices").empty();
         $(".choiceTwo").show();
@@ -53,7 +59,7 @@ $(".choiceOne").click(function(){
           $("#choices").append("You chose not to sleep but fell out anyways");
        nextLevel("Pretend To Be Unconscious","Fight","When you wake up, You're being dragged away what do you do?");
         programState = PRETEND_STATE;
-     }else if(programState===PRETEND_STATE){
+     }else if(programState===PRETEND_STATE||programState===PRETEND_STATE2){
           $("#choices").append("<br> You chose to fight the kidnapper");
         nextLevel("Go left","Go right","You're running from danger, what direction should you go?");
      programState=PANIC_STATE;
@@ -100,4 +106,12 @@ function nextLevel(text1,text2,text3){
         $(".choiceTwo").text(text2);
         $("#caption").text(text3);
         setTimeout(function(){$("#story").show(); }, 1000);
+}
+function flash(){
+    do {
+     setTimeout(function(){$(".fpage").hide(); }, 1000);
+     setTimeout(function(){$(".fpage").show(); }, 1000);
+     i++
+    }while (i>10);
+     
 }
