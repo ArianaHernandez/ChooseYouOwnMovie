@@ -10,7 +10,6 @@ var TURN_STATE=6;
 var CAUGHT_STATE=7;
 var STAIR_STATE=8;
 var PRETEND_STATE2=9;
-var i=100;
 var START=2;
 var programState= YES_STATE;
 function blinker() {
@@ -93,7 +92,7 @@ $(".choiceOne").click(function(){
          nextLevel("Struggle","Submit","The kidnapper has you!");
          programState=CAUGHT_STATE;
      }else if(programState===CAUGHT_STATE){
-          $("#choices").append("<br> You chose to sleep in class");
+          $("#choices").append("<br> You couldn't fight them off and choose to give up");
             nextLevel("Struggle","Stay Silent","You wake up tied to a chair");
         programState=STRUGGLE_STATE;
      }else if(programState===STAIR_STATE){
