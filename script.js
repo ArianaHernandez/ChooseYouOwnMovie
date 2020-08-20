@@ -39,7 +39,7 @@ $(".choiceOne").click(function(){
     }else if(programState===RESTART_STATE){
         $("#choices").empty();
         $(".choiceTwo").show();
-          nextLevel("Yes","No","You are bored and are going to fall asleep in class. Do you?");
+          nextLevel("Yes","No",You are home alone and tired. Do you go to sleep?");
         programState = YES_STATE;
     }else if(programState===PANIC_STATE){
         $("#choices").append("<br> You chose to run left, There is a masked figure, they knock you out");
