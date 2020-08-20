@@ -34,12 +34,12 @@ $(".choiceOne").click(function(){
           nextLevel("Continuing Pretending","Fight","You are still being dragged away what do you do?");
         programState=PRETEND_STATE2;
     }else if(programState===PRETEND_STATE2){
-        $("#choices").append("<br>You chose to continue pretending, you are dragged away never to be seene again.");
+        $("#choices").append("<br>You chose to continue pretending, you are dragged away never to be seen again.");
          GameOver("Game Over");
     }else if(programState===RESTART_STATE){
         $("#choices").empty();
         $(".choiceTwo").show();
-          nextLevel("Yes","No",You are home alone and tired. Do you go to sleep?");
+          nextLevel("Yes","No","You are home alone and tired. Do you go to sleep?");
         programState = YES_STATE;
     }else if(programState===PANIC_STATE){
         $("#choices").append("<br> You chose to run left, There is a masked figure, they knock you out");
