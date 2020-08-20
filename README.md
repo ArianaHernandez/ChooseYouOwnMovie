@@ -1,2 +1,2 @@
-# ChooseYouOwnMovie
+# ChooseYourOwnAdventure
 Ariana Hernandez
